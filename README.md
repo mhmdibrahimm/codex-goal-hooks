@@ -1,5 +1,7 @@
 # Codex Goal Status Notifier
 
+https://github.com/user-attachments/assets/983efc47-19f7-4647-8a47-4ffa4b728f7e
+
 Get a notification when a Codex goal becomes active, paused, blocked, resumed, or complete.
 
 It uses two signals:
