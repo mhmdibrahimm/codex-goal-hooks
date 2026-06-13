@@ -1,0 +1,23 @@
+{
+  "signals": {
+    "post_tool_use_update_goal": true,
+    "sqlite_goal_state": true
+  },
+  "macos": {
+    "enabled": true,
+    "mode": "all",
+    "detail": "status_only"
+  },
+  "ntfy": {
+    "enabled": true,
+    "server": "https://ntfy.sh",
+    "topic": "YOUR_TOPIC_HERE",
+    "mode": "all",
+    "detail": "status_only",
+    "priority": "urgent",
+    "tags": "warning,goal",
+    "token": "",
+    "click": "",
+    "timeout_seconds": 3
+  }
+}

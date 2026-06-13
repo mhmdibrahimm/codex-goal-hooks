@@ -1,0 +1,54 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"/ABSOLUTE/PATH/TO/codex-goal-hooks/hooks/goal_status_report.py\"",
+            "timeout": 10,
+            "statusMessage": "Checking goal status"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"/ABSOLUTE/PATH/TO/codex-goal-hooks/hooks/goal_status_report.py\" --snapshot-only",
+            "timeout": 10,
+            "statusMessage": "Snapshotting goal status"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"/ABSOLUTE/PATH/TO/codex-goal-hooks/hooks/goal_status_report.py\"",
+            "timeout": 10,
+            "statusMessage": "Reporting goal status"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"/ABSOLUTE/PATH/TO/codex-goal-hooks/hooks/goal_status_report.py\"",
+            "timeout": 10,
+            "statusMessage": "Checking goal status"
+          }
+        ]
+      }
+    ]
+  }
+}
